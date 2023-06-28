@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
+import { BrowserRouter as Router } from "react-router-dom";
 import Header from "./components/Header";
-
 import RoutesConfig from "./RoutesConfig";
-
-import games from "./data"; // Importe le fichier data.jsx
+import games from "./data";
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
