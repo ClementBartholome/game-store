@@ -2,8 +2,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 
 const GamePage = ({ games }) => {
-  const { id } = useParams();
-  const game = games.find((game) => game.id === parseInt(id));
+  const { name } = useParams();
+  const game = games.find((game) => game.title === name.replace(/-/g, " "));
 
   if (!game) {
     return <div>Le jeu demandé n'existe pas.</div>;
