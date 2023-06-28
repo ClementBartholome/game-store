@@ -19,6 +19,15 @@
   .buttons-div {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: space-between;
+
+    a {
+      display: flex;
+      gap: 10px;
+    }
+
+    svg {
+      fill: rgb(255, 255, 255);
+    }
   }
 }
