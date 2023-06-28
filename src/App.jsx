@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import GamePage from "./pages/GamePage";
+import Header from "./components/Header";
 import CartPage from "./components/CartPage";
 import games from "./data"; // Importe le fichier data.jsx
 
@@ -27,17 +28,7 @@ const App = () => {
 
   return (
     <Router>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Accueil</Link>
-          </li>
-          <li>
-            <Link to="/cart">Panier</Link>
-          </li>
-        </ul>
-      </nav>
-
+      <Header />
       <Routes>
         <Route
           exact
