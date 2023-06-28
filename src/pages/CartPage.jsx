@@ -1,5 +1,5 @@
 import React from "react";
-import CartItem from "./CartItem";
+import CartItem from "../components/CartItem";
 
 const CartPage = ({ cartItems, removeFromCart }) => {
   const total = cartItems.reduce((acc, item) => acc + item.price, 0);
