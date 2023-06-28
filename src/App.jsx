@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import GamePage from "./pages/GamePage";
+
 import Header from "./components/Header";
-import CartPage from "./components/CartPage";
+
+import RoutesConfig from "./RoutesConfig";
+
 import games from "./data"; // Importe le fichier data.jsx
 
 const App = () => {
@@ -17,10 +18,8 @@ const App = () => {
     const game = games.find((game) => game.id === gameId);
     if (game) {
       if (cartItems.some((item) => item.id === gameId)) {
-        // Si le jeu est déjà dans le panier, le retirer
         setCartItems(cartItems.filter((item) => item.id !== gameId));
       } else {
-        // Sinon, l'ajouter au panier
         setCartItems([...cartItems, game]);
       }
     }
@@ -29,27 +28,12 @@ const App = () => {
   return (
     <Router>
       <Header />
-      <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            <HomePage
-              games={games}
-              addToCart={addToCart}
-              removeFromCart={removeFromCart}
-              cartItems={cartItems}
-            />
-          }
-        />
-        <Route
-          path="/cart"
-          element={
-            <CartPage cartItems={cartItems} removeFromCart={removeFromCart} />
-          }
-        />
-        <Route path="/game/:id" element={<GamePage games={games} />} />
-      </Routes>
+      <RoutesConfig
+        games={games}
+        addToCart={addToCart}
+        removeFromCart={removeFromCart}
+        cartItems={cartItems}
+      />
     </Router>
   );
 };
