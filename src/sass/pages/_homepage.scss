@@ -1,4 +1,37 @@
-.homepage img {
-  width: 300px;
-  height: 200px;
+.search-div {
+  display: flex;
+  align-items: center;
+
+  input {
+    background-color: #262626;
+    border: 1px transparent;
+    border-radius: 8px;
+    color: #ccc;
+    height: 35px;
+    outline: none;
+    padding-left: 18px;
+    width: 450px;
+  }
+
+  svg {
+    fill: rgb(255, 255, 255);
+    transform: scale(0.5);
+  }
+}
+
+.grid-container {
+  grid-gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 25px;
+  padding-bottom: 50px;
+  h2 {
+    height: 60px;
+    margin-bottom: 5px;
+  }
+  img {
+    width: 400px;
+    height: 230px;
+    object-fit: cover;
+  }
 }

@@ -1,8 +1,11 @@
 @import "./base/base";
 
 @import "./pages/homepage";
-@import "./pages/gamepage"; /* Modèle
+@import "./pages/gamepage";
 
+@import "./layout/header";
+
+/* Modèle
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
