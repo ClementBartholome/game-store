@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import GameList from "./pages/GameList";
 import GamePage from "./pages/GamePage";
 import PageNotFound from "./pages/404";
 import CartPage from "./pages/CartPage";
@@ -14,11 +15,12 @@ const RoutesConfig = ({
 }) => {
   return (
     <Routes>
+      <Route path="/" element={<HomePage />} />
       <Route
         exact
-        path="/"
+        path="/explore"
         element={
-          <HomePage
+          <GameList
             games={games}
             addToCart={addToCart}
             removeFromCart={removeFromCart}
