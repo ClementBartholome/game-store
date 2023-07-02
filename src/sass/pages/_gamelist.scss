@@ -23,7 +23,7 @@
 .filter-bar {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 15px;
   flex-wrap: wrap;
 
   button {
@@ -64,4 +64,11 @@
   position: fixed;
   right: 50px;
   bottom: 50px;
+}
+
+@media (max-width: 1440px) {
+  .shopping-cart {
+    right: 7px;
+    transform: scale(0.7);
+  }
 }

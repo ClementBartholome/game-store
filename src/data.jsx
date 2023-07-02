@@ -4,6 +4,8 @@ const games = [
     title: "Forza Horizon 5",
     description:
       "Explorez un monde ouvert plein de vie dans les paysages du Mexique et vibrez au volant de voitures d'exception. Partez à la conquête des pistes accidentées de la Sierra Nueva dans cette expérience ultime du Rallye Horizon.",
+    fulldescription:
+      "Hogwarts Legacy : L'Héritage de Poudlard est un RPG d'action-aventure en monde ouvert qui se déroule dans l'univers des livres Harry Potter. Vous pouvez prendre le contrôle et vous retrouver au centre de votre propre aventure dans le monde des sorciers. Votre héritage est ce que vous en faites. Écrivez votre propre histoire.\n\nEXPLOREZ UN MONDE OUVERT\nLe monde des sorciers vous attend. Parcourez librement Poudlard, Pré-au-Lard, la forêt interdite et la région environnante.\n\nDEVENEZ LA SORCIÈRE OU LE SORCIER QUE VOUS VOULEZ ÊTRE\nApprenez des sortilèges, préparez des potions, faites pousser des plantes et soignez des créatures magiques tout au long de votre aventure. Découvrez votre maison, forgez des relations et maîtrisez les compétences pour devenir la sorcière ou le sorcier que vous voulez être.\n\nDÉCOUVREZ UNE NOUVELLE HISTOIRE DU MONDE DES SORCIERS\nDécouvrez le monde des sorciers à une époque oubliée pour révéler une vérité cachée de son passé. Combattez des trolls, des mages noirs, des gobelins et bien d'autres tout en affrontant un dangereux méchant qui menace le destin du monde des sorciers.",
     price: 59.99,
     tags: ["Racing", "Sports"],
     specs: {
@@ -25,6 +27,8 @@ const games = [
     title: "Elden Ring",
     description:
       "Un monde immense aux environnements riches et variés, parsemé d'obscurs et tortueux donjons tous reliés naturellement entre eux, vous attend. Au fil de votre exploration, goûtez à l'inconnu, bravez les menaces permanentes et accomplissez votre destinée.",
+    fulldescription:
+      "Hogwarts Legacy : L'Héritage de Poudlard est un RPG d'action-aventure en monde ouvert qui se déroule dans l'univers des livres Harry Potter. Vous pouvez prendre le contrôle et vous retrouver au centre de votre propre aventure dans le monde des sorciers. Votre héritage est ce que vous en faites. Écrivez votre propre histoire.\n\nEXPLOREZ UN MONDE OUVERT\nLe monde des sorciers vous attend. Parcourez librement Poudlard, Pré-au-Lard, la forêt interdite et la région environnante.\n\nDEVENEZ LA SORCIÈRE OU LE SORCIER QUE VOUS VOULEZ ÊTRE\nApprenez des sortilèges, préparez des potions, faites pousser des plantes et soignez des créatures magiques tout au long de votre aventure. Découvrez votre maison, forgez des relations et maîtrisez les compétences pour devenir la sorcière ou le sorcier que vous voulez être.\n\nDÉCOUVREZ UNE NOUVELLE HISTOIRE DU MONDE DES SORCIERS\nDécouvrez le monde des sorciers à une époque oubliée pour révéler une vérité cachée de son passé. Combattez des trolls, des mages noirs, des gobelins et bien d'autres tout en affrontant un dangereux méchant qui menace le destin du monde des sorciers.",
     price: 59.99,
     tags: ["Action-RPG"],
     specs: {
@@ -46,6 +50,8 @@ const games = [
     title: "Uncharted Legacy of Thieves Collection",
     description:
       "Incarnez Nathan Drake et Chloe Frazer dans leurs aventures indépendantes, où chacun devra confronter son passé et forger son héritage. Ce jeu contient les aventures solo acclamées par la critique UNCHARTED 4: A Thief's End et UNCHARTED: The Lost Legacy.",
+    fulldescription:
+      "Hogwarts Legacy : L'Héritage de Poudlard est un RPG d'action-aventure en monde ouvert qui se déroule dans l'univers des livres Harry Potter. Vous pouvez prendre le contrôle et vous retrouver au centre de votre propre aventure dans le monde des sorciers. Votre héritage est ce que vous en faites. Écrivez votre propre histoire.\n\nEXPLOREZ UN MONDE OUVERT\nLe monde des sorciers vous attend. Parcourez librement Poudlard, Pré-au-Lard, la forêt interdite et la région environnante.\n\nDEVENEZ LA SORCIÈRE OU LE SORCIER QUE VOUS VOULEZ ÊTRE\nApprenez des sortilèges, préparez des potions, faites pousser des plantes et soignez des créatures magiques tout au long de votre aventure. Découvrez votre maison, forgez des relations et maîtrisez les compétences pour devenir la sorcière ou le sorcier que vous voulez être.\n\nDÉCOUVREZ UNE NOUVELLE HISTOIRE DU MONDE DES SORCIERS\nDécouvrez le monde des sorciers à une époque oubliée pour révéler une vérité cachée de son passé. Combattez des trolls, des mages noirs, des gobelins et bien d'autres tout en affrontant un dangereux méchant qui menace le destin du monde des sorciers.",
     price: 49.99,
     tags: ["Aventure"],
     specs: {
@@ -67,6 +73,8 @@ const games = [
     title: "F1 23",
     description:
       "Dépassez le point de rupture dans EA SPORTS™ F1® 23, le jeu vidéo officiel du 2023 FIA Formula One World Championship™. Retrouvez un nouveau chapitre du mode histoire « Point de rupture » palpitant, avec ses drames à grande vitesse et ses rivalités enflammées.",
+    fulldescription:
+      "Hogwarts Legacy : L'Héritage de Poudlard est un RPG d'action-aventure en monde ouvert qui se déroule dans l'univers des livres Harry Potter. Vous pouvez prendre le contrôle et vous retrouver au centre de votre propre aventure dans le monde des sorciers. Votre héritage est ce que vous en faites. Écrivez votre propre histoire.\n\nEXPLOREZ UN MONDE OUVERT\nLe monde des sorciers vous attend. Parcourez librement Poudlard, Pré-au-Lard, la forêt interdite et la région environnante.\n\nDEVENEZ LA SORCIÈRE OU LE SORCIER QUE VOUS VOULEZ ÊTRE\nApprenez des sortilèges, préparez des potions, faites pousser des plantes et soignez des créatures magiques tout au long de votre aventure. Découvrez votre maison, forgez des relations et maîtrisez les compétences pour devenir la sorcière ou le sorcier que vous voulez être.\n\nDÉCOUVREZ UNE NOUVELLE HISTOIRE DU MONDE DES SORCIERS\nDécouvrez le monde des sorciers à une époque oubliée pour révéler une vérité cachée de son passé. Combattez des trolls, des mages noirs, des gobelins et bien d'autres tout en affrontant un dangereux méchant qui menace le destin du monde des sorciers.",
     price: 69.99,
     tags: ["Racing", "Sports"],
     specs: {
@@ -88,6 +96,8 @@ const games = [
     title: "The Elder Scrolls Online",
     description:
       "Rejoignez plus de 20 millions de joueurs dans le RPG multijoueur en ligne primé, pour vivre une aventure sans limite dans un univers Elder Scrolls persistant. Combat, artisanat, sièges, exploration... créez votre propre style de jeu, sans abonnement au jeu nécessaire.",
+    fulldescription:
+      "Hogwarts Legacy : L'Héritage de Poudlard est un RPG d'action-aventure en monde ouvert qui se déroule dans l'univers des livres Harry Potter. Vous pouvez prendre le contrôle et vous retrouver au centre de votre propre aventure dans le monde des sorciers. Votre héritage est ce que vous en faites. Écrivez votre propre histoire.\n\nEXPLOREZ UN MONDE OUVERT\nLe monde des sorciers vous attend. Parcourez librement Poudlard, Pré-au-Lard, la forêt interdite et la région environnante.\n\nDEVENEZ LA SORCIÈRE OU LE SORCIER QUE VOUS VOULEZ ÊTRE\nApprenez des sortilèges, préparez des potions, faites pousser des plantes et soignez des créatures magiques tout au long de votre aventure. Découvrez votre maison, forgez des relations et maîtrisez les compétences pour devenir la sorcière ou le sorcier que vous voulez être.\n\nDÉCOUVREZ UNE NOUVELLE HISTOIRE DU MONDE DES SORCIERS\nDécouvrez le monde des sorciers à une époque oubliée pour révéler une vérité cachée de son passé. Combattez des trolls, des mages noirs, des gobelins et bien d'autres tout en affrontant un dangereux méchant qui menace le destin du monde des sorciers.",
     price: 19.99,
     tags: ["MMO", "RPG"],
     specs: {
@@ -109,6 +119,8 @@ const games = [
     title: "Street Fighter 6",
     description:
       "Voici le tout nouveau challenger de Capcom ! Street Fighter™ 6, le dernier opus de la série, sera disponible mondialement le 2 juin 2023 ! L'expérience Street Fighter 6 s'étend sur trois modes de jeu distincts : World Tour, Fighting Ground et Battle Hub.",
+    fulldescription:
+      "Hogwarts Legacy : L'Héritage de Poudlard est un RPG d'action-aventure en monde ouvert qui se déroule dans l'univers des livres Harry Potter. Vous pouvez prendre le contrôle et vous retrouver au centre de votre propre aventure dans le monde des sorciers. Votre héritage est ce que vous en faites. Écrivez votre propre histoire.\n\nEXPLOREZ UN MONDE OUVERT\nLe monde des sorciers vous attend. Parcourez librement Poudlard, Pré-au-Lard, la forêt interdite et la région environnante.\n\nDEVENEZ LA SORCIÈRE OU LE SORCIER QUE VOUS VOULEZ ÊTRE\nApprenez des sortilèges, préparez des potions, faites pousser des plantes et soignez des créatures magiques tout au long de votre aventure. Découvrez votre maison, forgez des relations et maîtrisez les compétences pour devenir la sorcière ou le sorcier que vous voulez être.\n\nDÉCOUVREZ UNE NOUVELLE HISTOIRE DU MONDE DES SORCIERS\nDécouvrez le monde des sorciers à une époque oubliée pour révéler une vérité cachée de son passé. Combattez des trolls, des mages noirs, des gobelins et bien d'autres tout en affrontant un dangereux méchant qui menace le destin du monde des sorciers.",
     price: 59.99,
     tags: ["Versus Fighting"],
     specs: {
@@ -130,6 +142,8 @@ const games = [
     title: "Call of Duty Modern Warfare II",
     description:
       "Call of Duty®: Modern Warfare® II plonge les joueurs dans un conflit mondial sans précédent, avec le retour des Opérateurs emblématiques de la Task Force 141.",
+    fulldescription:
+      "Hogwarts Legacy : L'Héritage de Poudlard est un RPG d'action-aventure en monde ouvert qui se déroule dans l'univers des livres Harry Potter. Vous pouvez prendre le contrôle et vous retrouver au centre de votre propre aventure dans le monde des sorciers. Votre héritage est ce que vous en faites. Écrivez votre propre histoire.\n\nEXPLOREZ UN MONDE OUVERT\nLe monde des sorciers vous attend. Parcourez librement Poudlard, Pré-au-Lard, la forêt interdite et la région environnante.\n\nDEVENEZ LA SORCIÈRE OU LE SORCIER QUE VOUS VOULEZ ÊTRE\nApprenez des sortilèges, préparez des potions, faites pousser des plantes et soignez des créatures magiques tout au long de votre aventure. Découvrez votre maison, forgez des relations et maîtrisez les compétences pour devenir la sorcière ou le sorcier que vous voulez être.\n\nDÉCOUVREZ UNE NOUVELLE HISTOIRE DU MONDE DES SORCIERS\nDécouvrez le monde des sorciers à une époque oubliée pour révéler une vérité cachée de son passé. Combattez des trolls, des mages noirs, des gobelins et bien d'autres tout en affrontant un dangereux méchant qui menace le destin du monde des sorciers.",
     price: 59.99,
     tags: ["Shooter"],
     specs: {
@@ -151,6 +165,8 @@ const games = [
     title: "Starfield",
     description:
       "Starfield est le premier nouvel univers en 25 ans de Bethesda Game Studios, les créateurs récompensés de The Elder Scrolls V: Skyrim et Fallout 4.",
+    fulldescription:
+      "Hogwarts Legacy : L'Héritage de Poudlard est un RPG d'action-aventure en monde ouvert qui se déroule dans l'univers des livres Harry Potter. Vous pouvez prendre le contrôle et vous retrouver au centre de votre propre aventure dans le monde des sorciers. Votre héritage est ce que vous en faites. Écrivez votre propre histoire.\n\nEXPLOREZ UN MONDE OUVERT\nLe monde des sorciers vous attend. Parcourez librement Poudlard, Pré-au-Lard, la forêt interdite et la région environnante.\n\nDEVENEZ LA SORCIÈRE OU LE SORCIER QUE VOUS VOULEZ ÊTRE\nApprenez des sortilèges, préparez des potions, faites pousser des plantes et soignez des créatures magiques tout au long de votre aventure. Découvrez votre maison, forgez des relations et maîtrisez les compétences pour devenir la sorcière ou le sorcier que vous voulez être.\n\nDÉCOUVREZ UNE NOUVELLE HISTOIRE DU MONDE DES SORCIERS\nDécouvrez le monde des sorciers à une époque oubliée pour révéler une vérité cachée de son passé. Combattez des trolls, des mages noirs, des gobelins et bien d'autres tout en affrontant un dangereux méchant qui menace le destin du monde des sorciers.",
     price: 69.99,
     tags: ["RPG"],
     specs: {
@@ -172,6 +188,8 @@ const games = [
     title: "Anno 1800",
     description:
       "Anno 1800™ – Prenez la tête de la Révolution industrielle ! Bienvenue à l'aube de l'Ère industrielle. La voie que vous tracerez changera la face de votre monde. Serez-vous un innovateur ou un profiteur ? Un conquérant ou un libérateur ? De vous seul dépend la trace que vous laisserez dans l'histoire.",
+    fulldescription:
+      "Hogwarts Legacy : L'Héritage de Poudlard est un RPG d'action-aventure en monde ouvert qui se déroule dans l'univers des livres Harry Potter. Vous pouvez prendre le contrôle et vous retrouver au centre de votre propre aventure dans le monde des sorciers. Votre héritage est ce que vous en faites. Écrivez votre propre histoire.\n\nEXPLOREZ UN MONDE OUVERT\nLe monde des sorciers vous attend. Parcourez librement Poudlard, Pré-au-Lard, la forêt interdite et la région environnante.\n\nDEVENEZ LA SORCIÈRE OU LE SORCIER QUE VOUS VOULEZ ÊTRE\nApprenez des sortilèges, préparez des potions, faites pousser des plantes et soignez des créatures magiques tout au long de votre aventure. Découvrez votre maison, forgez des relations et maîtrisez les compétences pour devenir la sorcière ou le sorcier que vous voulez être.\n\nDÉCOUVREZ UNE NOUVELLE HISTOIRE DU MONDE DES SORCIERS\nDécouvrez le monde des sorciers à une époque oubliée pour révéler une vérité cachée de son passé. Combattez des trolls, des mages noirs, des gobelins et bien d'autres tout en affrontant un dangereux méchant qui menace le destin du monde des sorciers.",
     price: 14.99,
     tags: ["Gestion"],
     specs: {
@@ -193,6 +211,8 @@ const games = [
     title: "Football Manager 2023",
     description:
       "Montez votre équipe de rêve, surpassez la concurrence et vivez les grands frissons des soirées européennes dans l'UEFA Champions League. Votre épopée vers la gloire footballistique vous attend.",
+    fulldescription:
+      "Hogwarts Legacy : L'Héritage de Poudlard est un RPG d'action-aventure en monde ouvert qui se déroule dans l'univers des livres Harry Potter. Vous pouvez prendre le contrôle et vous retrouver au centre de votre propre aventure dans le monde des sorciers. Votre héritage est ce que vous en faites. Écrivez votre propre histoire.\n\nEXPLOREZ UN MONDE OUVERT\nLe monde des sorciers vous attend. Parcourez librement Poudlard, Pré-au-Lard, la forêt interdite et la région environnante.\n\nDEVENEZ LA SORCIÈRE OU LE SORCIER QUE VOUS VOULEZ ÊTRE\nApprenez des sortilèges, préparez des potions, faites pousser des plantes et soignez des créatures magiques tout au long de votre aventure. Découvrez votre maison, forgez des relations et maîtrisez les compétences pour devenir la sorcière ou le sorcier que vous voulez être.\n\nDÉCOUVREZ UNE NOUVELLE HISTOIRE DU MONDE DES SORCIERS\nDécouvrez le monde des sorciers à une époque oubliée pour révéler une vérité cachée de son passé. Combattez des trolls, des mages noirs, des gobelins et bien d'autres tout en affrontant un dangereux méchant qui menace le destin du monde des sorciers.",
     price: 59.99,
     tags: ["Sports"],
     specs: {
@@ -214,6 +234,8 @@ const games = [
     title: "Risk of Rain 2",
     description:
       "Échappez à une planète étrangère chaotique en affrontant des hordes de monstres déchaînés, en solo ou entre amis. Combinez le butin de façon surprenante et maîtrisez chacun des personnages jusqu'à devenir vous-même le chaos que vous craigniez tant lors de votre premier écrasement.",
+    fulldescription:
+      "Hogwarts Legacy : L'Héritage de Poudlard est un RPG d'action-aventure en monde ouvert qui se déroule dans l'univers des livres Harry Potter. Vous pouvez prendre le contrôle et vous retrouver au centre de votre propre aventure dans le monde des sorciers. Votre héritage est ce que vous en faites. Écrivez votre propre histoire.\n\nEXPLOREZ UN MONDE OUVERT\nLe monde des sorciers vous attend. Parcourez librement Poudlard, Pré-au-Lard, la forêt interdite et la région environnante.\n\nDEVENEZ LA SORCIÈRE OU LE SORCIER QUE VOUS VOULEZ ÊTRE\nApprenez des sortilèges, préparez des potions, faites pousser des plantes et soignez des créatures magiques tout au long de votre aventure. Découvrez votre maison, forgez des relations et maîtrisez les compétences pour devenir la sorcière ou le sorcier que vous voulez être.\n\nDÉCOUVREZ UNE NOUVELLE HISTOIRE DU MONDE DES SORCIERS\nDécouvrez le monde des sorciers à une époque oubliée pour révéler une vérité cachée de son passé. Combattez des trolls, des mages noirs, des gobelins et bien d'autres tout en affrontant un dangereux méchant qui menace le destin du monde des sorciers.",
     price: 24.99,
     tags: ["Shooter"],
     specs: {
@@ -235,6 +257,8 @@ const games = [
     title: "Sifu",
     description:
       "Sifu est un jeu de combat réaliste à la troisième personne, avec des mécaniques pointues de kung-fu et une action digne des films d'arts martiaux qui vous entraîne dans une quête de vengeance.",
+    fulldescription:
+      "Hogwarts Legacy : L'Héritage de Poudlard est un RPG d'action-aventure en monde ouvert qui se déroule dans l'univers des livres Harry Potter. Vous pouvez prendre le contrôle et vous retrouver au centre de votre propre aventure dans le monde des sorciers. Votre héritage est ce que vous en faites. Écrivez votre propre histoire.\n\nEXPLOREZ UN MONDE OUVERT\nLe monde des sorciers vous attend. Parcourez librement Poudlard, Pré-au-Lard, la forêt interdite et la région environnante.\n\nDEVENEZ LA SORCIÈRE OU LE SORCIER QUE VOUS VOULEZ ÊTRE\nApprenez des sortilèges, préparez des potions, faites pousser des plantes et soignez des créatures magiques tout au long de votre aventure. Découvrez votre maison, forgez des relations et maîtrisez les compétences pour devenir la sorcière ou le sorcier que vous voulez être.\n\nDÉCOUVREZ UNE NOUVELLE HISTOIRE DU MONDE DES SORCIERS\nDécouvrez le monde des sorciers à une époque oubliée pour révéler une vérité cachée de son passé. Combattez des trolls, des mages noirs, des gobelins et bien d'autres tout en affrontant un dangereux méchant qui menace le destin du monde des sorciers.",
     price: 39.99,
     tags: ["Action"],
     specs: {
@@ -255,7 +279,8 @@ const games = [
   //   id: ,
   //   title: "",
   //   description: "",
-  //   price: 59.99,
+  //
+  // price: 59.99,
   //   images: [
   //     "",
   //   ],

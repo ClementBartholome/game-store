@@ -15,7 +15,7 @@ const RoutesConfig = ({
 }) => {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
+      <Route path="/" element={<HomePage games={games} />} />
       <Route
         exact
         path="/explore"
@@ -31,7 +31,11 @@ const RoutesConfig = ({
       <Route
         path="/cart"
         element={
-          <CartPage cartItems={cartItems} removeFromCart={removeFromCart} />
+          <CartPage
+            cartItems={cartItems}
+            removeFromCart={removeFromCart}
+            games={games}
+          />
         }
       />
       <Route
@@ -47,7 +51,6 @@ const RoutesConfig = ({
         }
       />
       <Route path="/*" element={<PageNotFound />} />
-      <Route path="/404" element={<PageNotFound />} />
     </Routes>
   );
 };

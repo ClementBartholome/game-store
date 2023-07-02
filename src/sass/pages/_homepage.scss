@@ -1,39 +1,79 @@
-.hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-height: 580px;
-  gap: 20px;
+.homepage {
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 550px;
+    gap: 20px;
 
-  p {
-    font-size: 24px;
-    color: #6246ea;
+    .register-buttons {
+      display: flex;
+      gap: 30px;
+
+      button {
+        font-size: 2rem;
+        border-radius: 25px;
+        border: 1px transparent;
+        color: #fff;
+
+        padding: 8px 22px;
+      }
+
+      .login {
+        background-color: #262626;
+      }
+      .register {
+        background-color: #6246ea;
+      }
+    }
+
+    h1 {
+      font-size: 5.1rem;
+    }
+
+    p {
+      font-size: 2.5rem;
+      color: #6246ea;
+    }
+
+    img {
+      height: 560px;
+      width: 560px;
+    }
   }
 
-  h1 {
-    font-size: 62px;
+  .trending {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+
+    h2 {
+      margin: 0;
+    }
+
+    button {
+      background-color: #262626;
+      border: 1px transparent;
+      border-radius: 10px;
+      color: #fff;
+      cursor: pointer;
+      padding: 8px 22px;
+    }
   }
 
-  img {
-    height: 800px;
-    width: 560px;
-  }
-}
-
-.trending {
-  display: flex;
-  justify-content: space-between;
-
-  h2 {
-    margin: 0;
-  }
-
-  button {
-    background-color: #262626;
-    border: 1px transparent;
-    border-radius: 10px;
-    color: #fff;
-    cursor: pointer;
-    padding: 8px 22px;
+  .carrousel {
+    img {
+      max-width: 230px;
+      height: 250px;
+      height: 160px;
+      border-radius: 25px;
+      object-fit: cover;
+    }
+    .carrousel-container {
+      gap: 12px;
+    }
+    .carrousel-navigation {
+      display: none;
+    }
   }
 }

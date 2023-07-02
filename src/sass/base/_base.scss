@@ -13,11 +13,18 @@ body {
 body {
   padding: 0;
   margin: 0 auto;
-  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   width: 100vw;
+  height: 100vh;
   max-width: 1440px;
-  background-color: #0f1011;
+  background: rgba(0, 0, 0, 0.93);
+  // background: linear-gradient(
+  //   109.6deg,
+  //   rgba(0, 0, 0, 0.93) 11.2%,
+  //   rgb(63, 61, 61) 78.9%
+  // );
   color: white;
 }
 
@@ -43,4 +50,11 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+@media (max-width: 1440px) {
+  body {
+    width: 90vw;
+    font-size: 14px;
+  }
 }

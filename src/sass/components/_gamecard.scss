@@ -7,12 +7,16 @@
   border-radius: 12px;
   padding: 20px;
 
+  img:hover {
+    filter: drop-shadow(10px 10px 10px black);
+    transition: 0.5s;
+  }
+
   button {
     background-color: #262626;
     border: 1px transparent;
     border-radius: 10px;
     color: #fff;
-    cursor: pointer;
     padding: 8px 22px;
   }
 
@@ -24,6 +28,12 @@
     a {
       display: flex;
       gap: 10px;
+      align-items: center;
+
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.2s;
+      }
     }
 
     svg {

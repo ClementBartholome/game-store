@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import GameCard from "../components/GameCard";
 import { Link } from "react-router-dom";
 
-const HomePage = ({ games, addToCart, removeFromCart, cartItems }) => {
+const GameList = ({ games, addToCart, removeFromCart, cartItems }) => {
   const [searchGame, setSearchGame] = useState("");
   const [selectedTag, setSelectedTag] = useState(null);
 
@@ -93,4 +93,4 @@ const HomePage = ({ games, addToCart, removeFromCart, cartItems }) => {
   );
 };
 
-export default HomePage;
+export default GameList;

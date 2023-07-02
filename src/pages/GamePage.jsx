@@ -12,7 +12,7 @@ const GamePage = ({ games, cartItems, handleCartClick, removeFromCart }) => {
     return <div>Le jeu demandé n'existe pas.</div>;
   }
 
-  const { title, description, images, specs } = game;
+  const { title, description, fulldescription, images, specs } = game;
 
   const specsLabels = {
     link: "Site officiel :",
@@ -49,6 +49,15 @@ const GamePage = ({ games, cartItems, handleCartClick, removeFromCart }) => {
             removeFromCart={removeFromCart}
             addToCart={handleCartClick}
           />
+        </section>
+        <section className="game-description">
+          <h2>Description</h2>
+          {fulldescription.split("\n").map((paragraph, index) => (
+            <React.Fragment key={index}>
+              {paragraph}
+              <br />
+            </React.Fragment>
+          ))}
         </section>
       </div>
     </main>

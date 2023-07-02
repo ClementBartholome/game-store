@@ -3,6 +3,7 @@ header {
   justify-content: space-between;
   max-width: 1440px;
   margin: 0 auto;
+  font-size: 1.125rem;
 }
 
 .logo-div {
@@ -18,6 +19,9 @@ header {
 nav ul {
   display: flex;
   gap: 20px;
+  li a:hover {
+    color: hsl(229, 76%, 66%);
+  }
 }
 
 .active {
