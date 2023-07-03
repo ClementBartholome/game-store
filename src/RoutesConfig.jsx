@@ -5,6 +5,7 @@ import GameList from "./pages/GameList";
 import GamePage from "./pages/GamePage";
 import PageNotFound from "./pages/404";
 import CartPage from "./pages/CartPage";
+import Account from "./pages/Account";
 
 const RoutesConfig = ({
   games,
@@ -47,6 +48,16 @@ const RoutesConfig = ({
             handleCartClick={addToCart}
             cartItems={cartItems}
             removeFromCart={removeFromCart}
+          />
+        }
+      />
+      <Route
+        path="/account"
+        element={
+          <Account
+            addToCart={addToCart}
+            removeFromCart={removeFromCart}
+            isInCart={isInCart}
           />
         }
       />
