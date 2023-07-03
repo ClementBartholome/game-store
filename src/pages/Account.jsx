@@ -3,14 +3,10 @@ import AddToCartButton from "../components/AddToCart";
 
 const Account = ({ removeFromCart, addToCart, isInCart }) => {
   const [wishlist, setWishlist] = useState([]);
-  const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
     const storedWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
     setWishlist(storedWishlist);
-
-    const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    setCartItems(storedCartItems);
   }, []);
 
   const removeFromWishlist = (gameId) => {
@@ -19,23 +15,23 @@ const Account = ({ removeFromCart, addToCart, isInCart }) => {
     localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
   };
 
-  const addToCartAndUpdate = (gameId) => {
-    addToCart(gameId);
+  // const addToCartAndUpdate = (gameId) => {
+  //   addToCart(gameId);
 
-    // Mettre à jour la liste des articles du panier
-    const updatedCartItems = [...cartItems, { id: gameId }];
-    setCartItems(updatedCartItems);
-    localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
-  };
+  //   // Mettre à jour la liste des articles du panier
+  //   const updatedCartItems = [...cartItems, { id: gameId }];
+  //   setCartItems(updatedCartItems);
+  //   localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+  // };
 
-  const removeFromCartAndUpdate = (gameId) => {
-    removeFromCart(gameId);
+  // const removeFromCartAndUpdate = (gameId) => {
+  //   removeFromCart(gameId);
 
-    // Mettre à jour la liste des articles du panier
-    const updatedCartItems = cartItems.filter((item) => item.id !== gameId);
-    setCartItems(updatedCartItems);
-    localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
-  };
+  //   // Mettre à jour la liste des articles du panier
+  //   const updatedCartItems = cartItems.filter((item) => item.id !== gameId);
+  //   setCartItems(updatedCartItems);
+  //   localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+  // };
 
   return (
     <main>
@@ -52,8 +48,8 @@ const Account = ({ removeFromCart, addToCart, isInCart }) => {
                 <AddToCartButton
                   isInCart={isInCart(game.id)}
                   gameId={game.id}
-                  removeFromCart={removeFromCartAndUpdate}
-                  addToCart={addToCartAndUpdate}
+                  removeFromCart={removeFromCart}
+                  addToCart={addToCart}
                 />
                 <button onClick={() => removeFromWishlist(game.id)}>
                   Supprimer de ma wishlist
