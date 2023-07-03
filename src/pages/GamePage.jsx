@@ -12,7 +12,7 @@ const GamePage = ({ games, cartItems, handleCartClick, removeFromCart }) => {
     return <div>Le jeu demandé n'existe pas.</div>;
   }
 
-  const { title, description, fulldescription, images, specs } = game;
+  const { title, description, fulldescription, images, specs, id } = game;
 
   const specsLabels = {
     link: "Site officiel :",
@@ -27,7 +27,7 @@ const GamePage = ({ games, cartItems, handleCartClick, removeFromCart }) => {
     </li>
   ));
 
-  const isInCart = cartItems.some((item) => item.id === game.id);
+  const isInCart = cartItems.some((item) => item.gameId === id);
 
   return (
     <main className="gamepage">
@@ -45,7 +45,7 @@ const GamePage = ({ games, cartItems, handleCartClick, removeFromCart }) => {
           <Collapse title="Détails" content={<ul>{specsList}</ul>} />
           <AddToCartButton
             isInCart={isInCart}
-            gameId={game.id}
+            gameId={id} // Utilisez "id" au lieu de "game.id"
             removeFromCart={removeFromCart}
             addToCart={handleCartClick}
           />

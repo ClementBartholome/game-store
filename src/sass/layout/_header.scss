@@ -12,15 +12,26 @@ header {
   gap: 20px;
 
   svg {
-    fill: rgb(255, 255, 255);
+    fill: #ffff;
   }
 }
 
 nav ul {
   display: flex;
   gap: 20px;
-  li a:hover {
+
+  svg {
+    fill: #ffff;
+  }
+
+  li .account {
+    display: flex;
+    align-items: center;
+  }
+  li a:hover,
+  li a:hover svg {
     color: hsl(229, 76%, 66%);
+    fill: hsl(229, 76%, 66%);
   }
 }
 
