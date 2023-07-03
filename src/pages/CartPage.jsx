@@ -2,7 +2,7 @@ import React from "react";
 import CartItem from "../components/CartItem";
 
 const CartPage = ({ cartItems, removeFromCart, games }) => {
-  const total = cartItems.reduce((acc, item) => acc + item.price, 0);
+  const total = cartItems.reduce((acc, item) => acc + item.price, 0).toFixed(2);
 
   return (
     <main className="cart">
