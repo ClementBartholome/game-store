@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AddToCartButton from "../components/AddToCart";
 
-const Account = ({ removeFromCart, addToCart }) => {
+const Account = ({ removeFromCart, addToCart, isInCart }) => {
   const [wishlist, setWishlist] = useState([]);
   const [cartItems, setCartItems] = useState([]);
 
@@ -37,13 +37,9 @@ const Account = ({ removeFromCart, addToCart }) => {
     localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
   };
 
-  const isInCart = (gameId) => {
-    return cartItems.some((item) => item.id === gameId);
-  };
-
   return (
     <main>
-      <h2>Ma liste de souhaits</h2>
+      <h1>Ma liste de souhaits</h1>
       {wishlist.length === 0 ? (
         <p>Aucun jeu dans votre liste de souhaits.</p>
       ) : (

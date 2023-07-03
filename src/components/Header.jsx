@@ -1,14 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { NavLink, Link } from "react-router-dom";
 
-function Header() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    const userLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-    setIsLoggedIn(userLoggedIn);
-  }, []);
-
+function Header({ isLoggedIn }) {
   return (
     <header>
       <div className="logo-div">

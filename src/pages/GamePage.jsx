@@ -4,7 +4,7 @@ import Carrousel from "../components/Carrousel";
 import Collapse from "../components/Collapse";
 import AddToCartButton from "../components/AddToCart";
 
-const GamePage = ({ games, cartItems, handleCartClick, removeFromCart }) => {
+const GamePage = ({ games, addToCart, removeFromCart, isInCart }) => {
   const { name } = useParams();
   const game = games.find((game) => game.title === name.replace(/-/g, " "));
 
@@ -27,8 +27,6 @@ const GamePage = ({ games, cartItems, handleCartClick, removeFromCart }) => {
     </li>
   ));
 
-  const isInCart = cartItems.some((item) => item.gameId === id);
-
   return (
     <main className="gamepage">
       <div className="gamepage-container">
@@ -44,10 +42,10 @@ const GamePage = ({ games, cartItems, handleCartClick, removeFromCart }) => {
           </div>
           <Collapse title="Détails" content={<ul>{specsList}</ul>} />
           <AddToCartButton
-            isInCart={isInCart}
-            gameId={id} // Utilisez "id" au lieu de "game.id"
+            isInCart={isInCart(game.id)}
+            gameId={id}
             removeFromCart={removeFromCart}
-            addToCart={handleCartClick}
+            addToCart={addToCart}
           />
         </section>
         <section className="game-description">

@@ -1,46 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Hero from "../images/hero.svg";
 import Carrousel from "../components/Carrousel";
 import { Link } from "react-router-dom";
-import firebase from "firebase/compat/app";
-import "firebase/compat/auth";
 
-export default function HomePage({ games }) {
+export default function HomePage({
+  games,
+  handleLogin,
+  handleLogout,
+  isLoggedIn,
+}) {
   const gameCovers = games.slice(0, 6).map((game) => game.cover);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    const userLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-    setIsLoggedIn(userLoggedIn);
-  }, []);
-
-  const handleLogin = () => {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    firebase
-      .auth()
-      .signInWithPopup(provider)
-      .then((result) => {
-        console.log(result.user);
-        setIsLoggedIn(true);
-        localStorage.setItem("isLoggedIn", "true");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
-
-  const handleLogout = () => {
-    firebase
-      .auth()
-      .signOut()
-      .then(() => {
-        setIsLoggedIn(false);
-        localStorage.setItem("isLoggedIn", "false");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
 
   return (
     <main className="homepage">

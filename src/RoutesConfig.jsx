@@ -13,10 +13,23 @@ const RoutesConfig = ({
   removeFromCart,
   cartItems,
   isInCart,
+  handleLogin,
+  handleLogout,
+  isLoggedIn,
 }) => {
   return (
     <Routes>
-      <Route path="/" element={<HomePage games={games} />} />
+      <Route
+        path="/"
+        element={
+          <HomePage
+            games={games}
+            handleLogin={handleLogin}
+            handleLogout={handleLogout}
+            isLoggedIn={isLoggedIn}
+          />
+        }
+      />
       <Route
         exact
         path="/explore"
@@ -45,7 +58,7 @@ const RoutesConfig = ({
           <GamePage
             games={games}
             isInCart={isInCart}
-            handleCartClick={addToCart}
+            addToCart={addToCart}
             cartItems={cartItems}
             removeFromCart={removeFromCart}
           />
