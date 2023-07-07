@@ -58,6 +58,8 @@ const GameList = ({ games, addToCart, removeFromCart, cartItems }) => {
       .includes(searchGame.toLowerCase());
     const tagMatch = selectedTag ? game.tags.includes(selectedTag) : true;
     return titleMatch && tagMatch;
+    // titleMatch checks if the search text is included in the game's title
+    // tagMatch checks if the selectedTag is included in the game's tags. If no tag is selected, tagMatch = true, so all games are included
   });
 
   return (
