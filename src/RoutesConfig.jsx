@@ -7,10 +7,10 @@ import PageNotFound from "./pages/404";
 import CartPage from "./pages/CartPage";
 import Account from "./pages/Account";
 
-function RoutesConfig({ games }) {
+function RoutesConfig() {
   return (
     <Routes>
-      <Route path="/" element={<HomePage games={games} />} />
+      <Route path="/" element={<HomePage />} />
       <Route exact path="/explore" element={<GameList />} />
       <Route path="/cart" element={<CartPage />} />
       <Route path="/game/:name" element={<GamePage />} />

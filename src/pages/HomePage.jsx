@@ -3,8 +3,9 @@ import Hero from "../images/hero.svg";
 import Carrousel from "../components/Carrousel";
 import { Link } from "react-router-dom";
 import AuthContext from "../contexts/AuthContext";
+import games from "../data";
 
-export default function HomePage({ games }) {
+export default function HomePage() {
   const { user, handleLogin, handleLogout } = useContext(AuthContext);
   const gameCovers = games.slice(0, 6).map((game) => game.cover);
 
