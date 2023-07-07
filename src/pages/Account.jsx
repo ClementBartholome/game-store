@@ -18,24 +18,6 @@ function Account() {
     localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
   };
 
-  // const addToCartAndUpdate = (gameId) => {
-  //   addToCart(gameId);
-
-  //   // Mettre à jour la liste des articles du panier
-  //   const updatedCartItems = [...cartItems, { id: gameId }];
-  //   setCartItems(updatedCartItems);
-  //   localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
-  // };
-
-  // const removeFromCartAndUpdate = (gameId) => {
-  //   removeFromCart(gameId);
-
-  //   // Mettre à jour la liste des articles du panier
-  //   const updatedCartItems = cartItems.filter((item) => item.id !== gameId);
-  //   setCartItems(updatedCartItems);
-  //   localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
-  // };
-
   return (
     <main>
       <h1>Ma liste de souhaits</h1>

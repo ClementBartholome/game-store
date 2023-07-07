@@ -22,7 +22,7 @@ export function AuthProvider({ children }) {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
-        localStorage.setItem("user", JSON.stringify(user));
+        console.log(user);
       } else {
         setUser(null);
       }
