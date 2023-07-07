@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Hero from "../images/hero.svg";
 import Carrousel from "../components/Carrousel";
 import { Link } from "react-router-dom";
+import AuthContext from "../contexts/AuthContext";
 
-export default function HomePage({
-  games,
-  handleLogin,
-  handleLogout,
-  isLoggedIn,
-}) {
+export default function HomePage({ games }) {
+  const { user, handleLogin, handleLogout } = useContext(AuthContext);
   const gameCovers = games.slice(0, 6).map((game) => game.cover);
 
   return (
@@ -18,7 +15,7 @@ export default function HomePage({
           <p>Découvrez vos prochains jeux préférés</p>
           <h1>Game Hub</h1>
           <div className="register-buttons">
-            {isLoggedIn ? (
+            {user ? (
               <button className="logout" onClick={handleLogout}>
                 Déconnexion
               </button>

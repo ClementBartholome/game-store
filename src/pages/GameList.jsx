@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import GameCard from "../components/GameCard";
 import { Link } from "react-router-dom";
+import AuthContext from "../contexts/AuthContext";
 
 const GameList = ({ games, addToCart, removeFromCart, cartItems }) => {
+  const { user } = useContext(AuthContext);
   const [searchGame, setSearchGame] = useState("");
   const [selectedTag, setSelectedTag] = useState(null);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const [wishlist, setWishlist] = useState([]);
 
   useEffect(() => {
@@ -25,11 +27,6 @@ const GameList = ({ games, addToCart, removeFromCart, cartItems }) => {
       localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
     }
   };
-
-  useEffect(() => {
-    const checkLogin = localStorage.getItem("isLoggedIn") === "true";
-    setIsLoggedIn(checkLogin);
-  }, []);
 
   const handleSearchChange = (event) => {
     setSearchGame(event.target.value);
@@ -104,7 +101,7 @@ const GameList = ({ games, addToCart, removeFromCart, cartItems }) => {
             addToCart={addToCart}
             removeFromCart={removeFromCart}
             isInCart={cartItems.some((item) => item.id === game.id)}
-            isLoggedIn={isLoggedIn}
+            user={user}
             wishlist={wishlist}
             handleWishlistClick={handleWishlistClick}
           />

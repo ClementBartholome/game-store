@@ -6,7 +6,7 @@ const GameCard = ({
   addToCart,
   removeFromCart,
   isInCart,
-  isLoggedIn,
+  user,
   wishlist,
   handleWishlistClick,
 }) => {
@@ -31,7 +31,7 @@ const GameCard = ({
           removeFromCart={removeFromCart}
           addToCart={addToCart}
         />
-        {isLoggedIn && (
+        {user && (
           <svg
             width="24"
             height="24"

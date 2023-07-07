@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink, Link } from "react-router-dom";
+import AuthContext from "../contexts/AuthContext";
 
-function Header({ isLoggedIn }) {
+function Header() {
+  const { user } = useContext(AuthContext);
   return (
     <header>
       <div className="logo-div">
@@ -29,7 +31,7 @@ function Header({ isLoggedIn }) {
           <li>
             <NavLink to="/cart">Panier</NavLink>
           </li>
-          {isLoggedIn && (
+          {user && (
             <li>
               <NavLink to="/account" className="account">
                 Mon compte
