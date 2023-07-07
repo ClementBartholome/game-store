@@ -3,10 +3,11 @@ import Hero from "../images/hero.svg";
 import Carrousel from "../components/Carrousel";
 import { Link } from "react-router-dom";
 import AuthContext from "../contexts/AuthContext";
-import games from "../data";
+import CartContext from "../contexts/CartContext";
 
 export default function HomePage() {
   const { user, handleLogin, handleLogout } = useContext(AuthContext);
+  const { games } = useContext(CartContext);
   const gameCovers = games.slice(0, 6).map((game) => game.cover);
 
   return (

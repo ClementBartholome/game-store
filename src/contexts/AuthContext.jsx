@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { initializeApp } from "firebase/app";
+import { app } from "../FirebaseConfig";
 import {
   getAuth,
   signInWithPopup,
@@ -8,16 +8,6 @@ import {
   onAuthStateChanged,
 } from "firebase/auth";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyD6YNh1TXCUrdaRCwQ-nSqeD17_d_hUf08",
-  authDomain: "gamehub-721b3.firebaseapp.com",
-  projectId: "gamehub-721b3",
-  storageBucket: "gamehub-721b3.appspot.com",
-  messagingSenderId: "849360036594",
-  appId: "1:849360036594:web:733387cfef3f4b6917666b",
-};
-
-const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 

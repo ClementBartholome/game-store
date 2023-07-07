@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import games from "../data";
+import { db } from "../FirebaseConfig";
 
 const CartContext = createContext();
 
@@ -9,10 +9,28 @@ export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState(
     JSON.parse(localStorage.getItem("cartItems")) || []
   );
+  const [games, setGames] = useState([]);
 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
+
+  useEffect(() => {
+    const fetchGames = async () => {
+      try {
+        // get all games from "games" collection in Firebase DB
+        const gamesSnapshot = await db.collection("games").get();
+        const gamesData = gamesSnapshot.docs.map((doc) => doc.data());
+        // sort games by id in descending order
+        gamesData.sort((a, b) => b.id - a.id);
+        setGames(gamesData);
+      } catch (error) {
+        console.error("Error fetching games from Firestore:", error);
+      }
+    };
+
+    fetchGames();
+  }, []);
 
   const removeFromCart = (gameId) => {
     setCartItems(cartItems.filter((item) => item.id !== gameId));
