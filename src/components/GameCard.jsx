@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import AddToCartButton from "../components/AddToCart";
 
-const GameCard = ({
+function GameCard({
   game,
   addToCart,
   removeFromCart,
@@ -9,7 +9,7 @@ const GameCard = ({
   user,
   wishlist,
   handleWishlistClick,
-}) => {
+}) {
   const { id, title, description, price, cover } = game;
 
   const isInWishlist = wishlist.some((game) => game.id === id);
@@ -51,6 +51,6 @@ const GameCard = ({
       </div>
     </div>
   );
-};
+}
 
 export default GameCard;

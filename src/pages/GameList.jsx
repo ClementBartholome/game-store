@@ -2,9 +2,13 @@ import React, { useState, useEffect, useContext } from "react";
 import GameCard from "../components/GameCard";
 import { Link } from "react-router-dom";
 import AuthContext from "../contexts/AuthContext";
+import CartContext from "../contexts/CartContext";
 
-const GameList = ({ games, addToCart, removeFromCart, cartItems }) => {
+function GameList() {
   const { user } = useContext(AuthContext);
+  const { games, addToCart, removeFromCart, cartItems } =
+    useContext(CartContext);
+
   const [searchGame, setSearchGame] = useState("");
   const [selectedTag, setSelectedTag] = useState(null);
 
@@ -118,6 +122,6 @@ const GameList = ({ games, addToCart, removeFromCart, cartItems }) => {
       </Link>
     </main>
   );
-};
+}
 
 export default GameList;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const CartItem = ({ item, removeFromCart }) => {
+function CartItem({ item, removeFromCart }) {
   const { id, title, price } = item;
 
   return (
@@ -10,6 +10,6 @@ const CartItem = ({ item, removeFromCart }) => {
       <button onClick={() => removeFromCart(id)}>Supprimer du panier</button>
     </div>
   );
-};
+}
 
 export default CartItem;

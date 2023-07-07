@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import CartItem from "../components/CartItem";
+import CartContext from "../contexts/CartContext";
 
-const CartPage = ({ cartItems, removeFromCart, games }) => {
+function CartPage() {
+  const { cartItems, removeFromCart, games } = useContext(CartContext);
+
   const total = cartItems.reduce((acc, item) => acc + item.price, 0).toFixed(2);
 
   return (
@@ -35,6 +38,6 @@ const CartPage = ({ cartItems, removeFromCart, games }) => {
       </div>
     </main>
   );
-};
+}
 
 export default CartPage;

@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import AddToCartButton from "../components/AddToCart";
+import CartContext from "../contexts/CartContext";
 
-const Account = ({ removeFromCart, addToCart, isInCart }) => {
+function Account() {
+  const { removeFromCart, addToCart, isInCart } = useContext(CartContext);
+
   const [wishlist, setWishlist] = useState([]);
 
   useEffect(() => {
@@ -62,6 +65,6 @@ const Account = ({ removeFromCart, addToCart, isInCart }) => {
       )}
     </main>
   );
-};
+}
 
 export default Account;

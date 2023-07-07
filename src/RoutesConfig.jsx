@@ -7,63 +7,17 @@ import PageNotFound from "./pages/404";
 import CartPage from "./pages/CartPage";
 import Account from "./pages/Account";
 
-const RoutesConfig = ({
-  games,
-  addToCart,
-  removeFromCart,
-  cartItems,
-  isInCart,
-}) => {
+function RoutesConfig({ games }) {
   return (
     <Routes>
       <Route path="/" element={<HomePage games={games} />} />
-      <Route
-        exact
-        path="/explore"
-        element={
-          <GameList
-            games={games}
-            addToCart={addToCart}
-            removeFromCart={removeFromCart}
-            cartItems={cartItems}
-          />
-        }
-      />
-      <Route
-        path="/cart"
-        element={
-          <CartPage
-            cartItems={cartItems}
-            removeFromCart={removeFromCart}
-            games={games}
-          />
-        }
-      />
-      <Route
-        path="/game/:name"
-        element={
-          <GamePage
-            games={games}
-            isInCart={isInCart}
-            addToCart={addToCart}
-            cartItems={cartItems}
-            removeFromCart={removeFromCart}
-          />
-        }
-      />
-      <Route
-        path="/account"
-        element={
-          <Account
-            addToCart={addToCart}
-            removeFromCart={removeFromCart}
-            isInCart={isInCart}
-          />
-        }
-      />
+      <Route exact path="/explore" element={<GameList />} />
+      <Route path="/cart" element={<CartPage />} />
+      <Route path="/game/:name" element={<GamePage />} />
+      <Route path="/account" element={<Account />} />
       <Route path="/*" element={<PageNotFound />} />
     </Routes>
   );
-};
+}
 
 export default RoutesConfig;

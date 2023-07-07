@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const AddToCartButton = ({ isInCart, gameId, removeFromCart, addToCart }) => {
+function AddToCartButton({ isInCart, gameId, removeFromCart, addToCart }) {
   const [isAnimating, setIsAnimating] = useState(false);
 
   const handleCartClick = () => {
@@ -22,6 +22,6 @@ const AddToCartButton = ({ isInCart, gameId, removeFromCart, addToCart }) => {
       {isInCart ? "Retirer du panier" : "Ajouter au panier"}
     </button>
   );
-};
+}
 
 export default AddToCartButton;

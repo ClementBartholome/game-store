@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import Carrousel from "../components/Carrousel";
 import Collapse from "../components/Collapse";
 import AddToCartButton from "../components/AddToCart";
+import CartContext from "../contexts/CartContext";
 
-const GamePage = ({ games, addToCart, removeFromCart, isInCart }) => {
+function GamePage() {
+  const { games, addToCart, removeFromCart, isInCart } =
+    useContext(CartContext);
+
   const { name } = useParams();
   const game = games.find((game) => game.title === name.replace(/-/g, " "));
 
@@ -60,6 +64,6 @@ const GamePage = ({ games, addToCart, removeFromCart, isInCart }) => {
       </div>
     </main>
   );
-};
+}
 
 export default GamePage;
