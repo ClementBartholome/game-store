@@ -19,7 +19,7 @@ export function WishlistProvider({ children }) {
         try {
           const userWishlistRef = db.collection("wishlists").doc(user.uid);
           const wishlishtSnapshot = await userWishlistRef
-            .collection("wishlists")
+            .collection("wishlistItems")
             .get();
           const wishlistData = wishlishtSnapshot.docs.map((doc) => doc.data());
           setWishlist(wishlistData);
@@ -56,7 +56,7 @@ export function WishlistProvider({ children }) {
         console.log("clicked");
         const userWishlistRef = db.collection("wishlists").doc(user.uid); // Reference the user's wishlist in the "wishlists" collection
         const wishlistItemQuery = await userWishlistRef // Query the "wishlist" subcollection for the game with the matching ID
-          .collection("wishlists")
+          .collection("wishlistItems")
           .where("id", "==", gameId) // Query the "wishlist" subcollection for the game with the matching ID
           .limit(1) // Limit the query to 1 result
           .get();
