@@ -1,22 +1,11 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useContext } from "react";
 import AddToCartButton from "../components/AddToCart";
 import CartContext from "../contexts/CartContext";
+import WishlistContext from "../contexts/WishlistContext";
 
 function Account() {
   const { removeFromCart, addToCart, isInCart } = useContext(CartContext);
-
-  const [wishlist, setWishlist] = useState([]);
-
-  useEffect(() => {
-    const storedWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-    setWishlist(storedWishlist);
-  }, []);
-
-  const removeFromWishlist = (gameId) => {
-    const updatedWishlist = wishlist.filter((game) => game.id !== gameId);
-    setWishlist(updatedWishlist);
-    localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
-  };
+  const { removeFromWishlist, wishlist } = useContext(WishlistContext);
 
   return (
     <main>

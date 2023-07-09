@@ -1,34 +1,25 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import GameCard from "../components/GameCard";
 import { Link } from "react-router-dom";
 import AuthContext from "../contexts/AuthContext";
 import CartContext from "../contexts/CartContext";
+import WishlistContext from "../contexts/WishlistContext";
 
 function GameList() {
   const { user } = useContext(AuthContext);
   const { games, addToCart, removeFromCart, cartItems } =
     useContext(CartContext);
+  const { removeFromWishlist, wishlist, addToWishlist } =
+    useContext(WishlistContext);
 
   const [searchGame, setSearchGame] = useState("");
   const [selectedTag, setSelectedTag] = useState(null);
 
-  const [wishlist, setWishlist] = useState([]);
-
-  useEffect(() => {
-    const storedWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-    setWishlist(storedWishlist);
-  }, []);
-
   const handleWishlistClick = (gameId) => {
     if (wishlist.some((game) => game.id === gameId)) {
-      const updatedWishlist = wishlist.filter((game) => game.id !== gameId);
-      setWishlist(updatedWishlist);
-      localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
+      removeFromWishlist(gameId); // Remove game from wishlist
     } else {
-      const game = games.find((game) => game.id === gameId);
-      const updatedWishlist = [...wishlist, game];
-      setWishlist(updatedWishlist);
-      localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
+      addToWishlist(gameId); // Add game to wishlist
     }
   };
 
