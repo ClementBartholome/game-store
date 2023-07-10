@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState, useContext } from "react";
 import { db } from "../FirebaseConfig";
 import AuthContext from "./AuthContext";
-import CartContext from "./CartContext";
+import GamesContext from "./GamesContext";
 
 const WishlistContext = createContext();
 
@@ -9,7 +9,7 @@ export default WishlistContext;
 
 export function WishlistProvider({ children }) {
   const { user } = useContext(AuthContext);
-  const { games } = useContext(CartContext);
+  const { games } = useContext(GamesContext);
 
   const [wishlist, setWishlist] = useState([]);
 
@@ -87,7 +87,6 @@ export function WishlistProvider({ children }) {
     isInWishlist,
     addToWishlist,
     wishlist,
-    games,
   };
 
   return (

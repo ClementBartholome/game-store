@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import CartItem from "../components/CartItem";
 import CartContext from "../contexts/CartContext";
+import GamesContext from "../contexts/GamesContext";
 
 function CartPage() {
-  const { cartItems, removeFromCart, games } = useContext(CartContext);
+  const { cartItems, removeFromCart } = useContext(CartContext);
+  const { games } = useContext(GamesContext);
 
   const total = cartItems.reduce((acc, item) => acc + item.price, 0).toFixed(2);
 
