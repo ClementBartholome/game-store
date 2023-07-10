@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState, useContext } from "react";
 import { db } from "../FirebaseConfig";
 import AuthContext from "./AuthContext";
+import GamesContext from "./GamesContext";
 
 const CartContext = createContext();
 
@@ -8,9 +9,9 @@ export default CartContext;
 
 export function CartProvider({ children }) {
   const { user } = useContext(AuthContext);
+  const { games } = useContext(GamesContext);
 
   const [cartItems, setCartItems] = useState([]);
-  const [games, setGames] = useState([]);
 
   // Fetch cart items from Firestore when the user changes
   useEffect(() => {
@@ -31,22 +32,6 @@ export function CartProvider({ children }) {
 
     fetchCartItems();
   }, [user]);
-
-  // Fetch games from Firestore
-  useEffect(() => {
-    const fetchGames = async () => {
-      try {
-        const gamesSnapshot = await db.collection("games").get(); // Fetch the games from the "games" collection
-        const gamesData = gamesSnapshot.docs.map((doc) => doc.data()); // Extract the game data from the snapshot
-        gamesData.sort((a, b) => b.id - a.id); // Sort the games by ID in descending order
-        setGames(gamesData);
-      } catch (error) {
-        console.error("Error fetching games from Firestore:", error);
-      }
-    };
-
-    fetchGames();
-  }, []);
 
   // Add a game to the user's cart
   const addToCart = async (gameId) => {
