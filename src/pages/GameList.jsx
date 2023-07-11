@@ -1,7 +1,8 @@
 import React, { useState, useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import GameCard from "../components/GameCard";
 import Loader from "../components/Loader";
-import { Link } from "react-router-dom";
+import GamesColumn from "../components/GamesColumn";
 import AuthContext from "../contexts/AuthContext";
 import CartContext from "../contexts/CartContext";
 import GamesContext from "../contexts/GamesContext";
@@ -16,6 +17,9 @@ function GameList() {
 
   const [searchGame, setSearchGame] = useState("");
   const [selectedTag, setSelectedTag] = useState(null);
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(100);
+
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -41,6 +45,16 @@ function GameList() {
     setSearchGame(event.target.value);
   };
 
+  const handleMinPriceChange = (event) => {
+    const value = event.target.value;
+    setMinPrice(value);
+  };
+
+  const handleMaxPriceChange = (event) => {
+    const value = event.target.value;
+    setMaxPrice(value);
+  };
+
   const tags = games.reduce((allTags, game) => {
     game.tags.forEach((tag) => {
       if (!allTags.includes(tag)) {
@@ -63,9 +77,11 @@ function GameList() {
       .toLowerCase()
       .includes(searchGame.toLowerCase());
     const tagMatch = selectedTag ? game.tags.includes(selectedTag) : true;
-    return titleMatch && tagMatch;
+    const priceMatch = game.price >= minPrice && game.price <= maxPrice;
+    return titleMatch && tagMatch && priceMatch;
     // titleMatch checks if the search text is included in the game's title
     // tagMatch checks if the selectedTag is included in the game's tags. If no tag is selected, tagMatch = true, so all games are included
+    // priceMatch check if the game's price is between the minPrice and maxPrice
   });
 
   return (
@@ -102,6 +118,24 @@ function GameList() {
           </button>
         )}
       </div>
+      <div className="price-range">
+        <span>Prix :</span>
+        <input
+          type="number"
+          min="0"
+          max="100"
+          value={minPrice}
+          onChange={handleMinPriceChange}
+        />
+        <span> - </span>
+        <input
+          type="number"
+          min="0"
+          max="100"
+          value={maxPrice}
+          onChange={handleMaxPriceChange}
+        />
+      </div>
       {isLoading ? (
         <Loader />
       ) : (
@@ -119,6 +153,11 @@ function GameList() {
                 handleWishlistClick={handleWishlistClick}
               />
             ))}
+          </div>
+          <div className="games-column-grid">
+            <GamesColumn columnTitle="Meilleures ventes" />
+            <GamesColumn columnTitle="Les plus populaires" />
+            <GamesColumn columnTitle="Sorties prochaines" />
           </div>
           <Link to="/cart">
             <svg
