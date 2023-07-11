@@ -10,6 +10,7 @@ import {
 
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
+
 const AuthContext = createContext();
 
 export default AuthContext;
@@ -21,7 +22,6 @@ export function AuthProvider({ children }) {
     // Subscribe to the authentication state changes
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        // If user is authenticated, update the user state and log the user object
         setUser(user);
         console.log(user);
       } else {
