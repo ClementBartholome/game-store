@@ -1,13 +1,18 @@
 .cart-container {
   display: flex;
   gap: 20px;
+
+  .checkout {
+    width: 50%;
+  }
 }
 
 .cart {
   .cart-items {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 30px;
+
     .cart-item {
       display: flex;
       flex-direction: row-reverse;
@@ -16,6 +21,7 @@
       background-color: rgb(32, 32, 32);
       border-radius: 4px;
       padding: 20px;
+      width: 48%;
       img {
         height: 171px;
         width: 250px;
