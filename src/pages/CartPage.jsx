@@ -7,6 +7,7 @@ function CartPage() {
   const { cartItems, removeFromCart } = useContext(CartContext);
   const { games } = useContext(GamesContext);
 
+  // Iterate on each elements of the cartItems array and add the price of each item to the accumulator
   const total = cartItems.reduce((acc, item) => acc + item.price, 0).toFixed(2);
 
   return (
