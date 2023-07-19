@@ -16,9 +16,10 @@ const AuthContext = createContext();
 export default AuthContext;
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(localStorage.getItem("user") || null);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
+    // Subscribe to the authentication state changes
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
@@ -28,12 +29,14 @@ export function AuthProvider({ children }) {
       }
     });
 
+    // Unsubscribe from the authentication state changes when the component is unmounted
     return () => {
       unsubscribe();
     };
   }, []);
 
   const handleLogin = async () => {
+    // Sign in with the Google popup provider
     const { user } = await signInWithPopup(auth, provider);
     setUser(user);
   };

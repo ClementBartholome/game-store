@@ -4,10 +4,11 @@ import Carrousel from "../components/Carrousel";
 import Collapse from "../components/Collapse";
 import AddToCartButton from "../components/AddToCart";
 import CartContext from "../contexts/CartContext";
+import GamesContext from "../contexts/GamesContext";
 
 function GamePage() {
-  const { games, addToCart, removeFromCart, isInCart } =
-    useContext(CartContext);
+  const { addToCart, removeFromCart, isInCart } = useContext(CartContext);
+  const { games } = useContext(GamesContext);
 
   const { name } = useParams();
   const game = games.find((game) => game.title === name.replace(/-/g, " "));

@@ -1,10 +1,13 @@
 import React, { useContext } from "react";
 import CartItem from "../components/CartItem";
 import CartContext from "../contexts/CartContext";
+import GamesContext from "../contexts/GamesContext";
 
 function CartPage() {
-  const { cartItems, removeFromCart, games } = useContext(CartContext);
+  const { cartItems, removeFromCart } = useContext(CartContext);
+  const { games } = useContext(GamesContext);
 
+  // Iterate on each elements of the cartItems array and add the price of each item to the accumulator
   const total = cartItems.reduce((acc, item) => acc + item.price, 0).toFixed(2);
 
   return (

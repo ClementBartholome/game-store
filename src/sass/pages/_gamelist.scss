@@ -25,6 +25,7 @@
   align-items: center;
   gap: 15px;
   flex-wrap: wrap;
+  margin-bottom: 10px;
 
   button {
     background-color: #262626;
@@ -38,6 +39,26 @@
     &:last-of-type {
       display: inline;
     }
+  }
+}
+
+.price-range {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input {
+    background-color: #262626;
+    border: 1px transparent;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    height: 30px;
+    padding: 8px 22px;
   }
 }
 
@@ -64,6 +85,38 @@
   position: fixed;
   right: 50px;
   bottom: 50px;
+}
+
+.games-column-grid {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+
+  .games-column {
+    border-right: 1px solid grey;
+    padding-right: 140px;
+    padding-left: 20px;
+
+    h2,
+    h3 {
+      margin: 0;
+    }
+    .games-column-container {
+      display: flex;
+      flex-direction: column;
+
+      .games-column-item {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        gap: 30px;
+        img {
+          width: 98px;
+          height: 128px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 1440px) {
