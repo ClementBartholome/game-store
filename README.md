@@ -4,6 +4,10 @@
 
 [Démo](https://gamehub-clementbartholome.netlify.app/)
 
+## Screenshot
+
+![Screenshot](https://storage.googleapis.com/images_portfolio_steam/project_gamehub_3.webp)
+
 ## Description du projet
 
 Projet personnel avec React / SCSS. 
