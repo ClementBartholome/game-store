@@ -1,9 +1,26 @@
 import React, { useContext } from "react";
 import { NavLink, Link } from "react-router-dom";
 import AuthContext from "../contexts/AuthContext";
+import { useState } from "react";
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const { user } = useContext(AuthContext);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+    document.body.classList.remove("disable-scroll"); // Supprime la classe de désactivation du défilement
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+    if (!menuOpen) {
+      document.body.classList.add("disable-scroll"); // Ajoute la classe pour désactiver le défilement
+    } else {
+      document.body.classList.remove("disable-scroll"); // Supprime la classe de désactivation du défilement
+    }
+  };
+
   return (
     <header>
       <div className="logo-div">
@@ -20,20 +37,26 @@ function Header() {
           </svg>
         </Link>
       </div>
-      <nav>
+      <nav className={menuOpen ? "menu-open" : ""}>
         <ul>
           <li>
-            <NavLink to="/">Accueil</NavLink>
+            <NavLink to="/" onClick={closeMenu}>
+              Accueil
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/explore">Explorer</NavLink>
+            <NavLink to="/explore" onClick={closeMenu}>
+              Explorer
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/cart">Panier</NavLink>
+            <NavLink to="/cart" onClick={closeMenu}>
+              Panier
+            </NavLink>
           </li>
           {user && (
             <li>
-              <NavLink to="/account" className="account">
+              <NavLink to="/account" onClick={closeMenu} className="account">
                 Mon compte
                 <svg
                   width="24"
@@ -48,6 +71,16 @@ function Header() {
           )}
         </ul>
       </nav>
+      <button
+        className={`menu-button ${menuOpen ? "open" : ""}`}
+        onClick={toggleMenu}
+        aria-label="Menu">
+        <div className="menu-icon">
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
+      </button>
     </header>
   );
 }

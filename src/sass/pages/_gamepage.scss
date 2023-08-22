@@ -68,3 +68,15 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .gamepage-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .carrousel {
+    min-height: 300px;
+  }
+}

@@ -63,3 +63,26 @@
     transform: scale(1);
   }
 }
+
+@media (max-width: 1300px) {
+  .buttons-div {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .buttons-div {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 450px) {
+  .buttons-div {
+    flex-direction: column;
+
+    button {
+      width: 100%;
+    }
+  }
+}
