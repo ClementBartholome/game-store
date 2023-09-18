@@ -96,6 +96,7 @@
   .games-column {
     border-right: 1px solid grey;
     padding-left: 20px;
+    padding-right: 20px;
 
     &:last-of-type {
       border-right: 0;
@@ -117,6 +118,10 @@
         img {
           width: 98px;
           height: 128px;
+        }
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+          border-radius: 16px;
         }
       }
     }

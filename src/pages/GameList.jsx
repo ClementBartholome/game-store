@@ -157,9 +157,33 @@ function GameList() {
             ))}
           </div>
           <div className="games-column-grid">
-            <GamesColumn columnTitle="Meilleures ventes" />
-            <GamesColumn columnTitle="Les plus populaires" />
-            <GamesColumn columnTitle="Sorties prochaines" />
+            <GamesColumn
+              columnTitle="Meilleures ventes"
+              gamesTitles={["Dead Island 2", "Star Wars Jedi Survivor"]}
+              gamesImages={[
+                "https://cdn1.epicgames.com/offer/236c74b4cd2e4e3099cbe2ebdc9686fd/EGS_DeadIsland2_DeepSilverDambusterStudios_S2_1200x1600-efc5201842cf642eb45f73227cd0789b?h=480&quality=medium&resize=1&w=360",
+                "https://cdn1.epicgames.com/offer/5a2ea5980ac147c195775039195a3081/EGS_STARWARSJediSurvivorStandardEdition_RespawnEntertainment_S2_1200x1600-fd090aecb23a065b29ea101939798edd?h=480&quality=medium&resize=1&w=360",
+              ]}
+              gamesPrices={["59,99€", "59,99€"]}
+            />
+            <GamesColumn
+              columnTitle="Les plus populaires"
+              gamesTitles={["Red Dead Redemption 2", "Fortnite"]}
+              gamesImages={[
+                "https://cdn1.epicgames.com/epic/offer/RDR2PC1227_Epic%20Games_860x1148-860x1148-b4c2210ee0c3c3b843a8de399bfe7f5c.jpg?h=480&quality=medium&resize=1&w=360",
+                "https://cdn1.epicgames.com/offer/fn/26BR_C4S4_EGS_Launcher_Blade_1200x1600_1200x1600-72d477839e2f1e1a9b3847d0998f50bc?h=480&quality=medium&resize=1&w=360",
+              ]}
+              gamesPrices={["39,99€", "Gratuit"]}
+            />
+            <GamesColumn
+              columnTitle="Sorties prochaines"
+              gamesTitles={["Assassin's Creed Mirage", "Alan Wake 2"]}
+              gamesImages={[
+                "https://cdn1.epicgames.com/offer/c4763f236d08423eb47b4c3008779c84/EGS_AlanWake2_RemedyEntertainment_S2_1200x1600-c7c8091ddac0f9669c8e5905bca88aaa?h=480&quality=medium&resize=1&w=360",
+                "https://cdn1.epicgames.com/offer/9bcf5a4dc1d54cb6ab1a42f3a70c5cf4/Carousel_BoxArt_1200x1600_1200x1600-38bda67bb1290f58e8a18ddc38a3c0ec?h=480&quality=medium&resize=1&w=360",
+              ]}
+              gamesPrices={["49,99€", "59,99€"]}
+            />
           </div>
           <Link to="/cart">
             <svg
