@@ -5,7 +5,6 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   signOut,
-  onAuthStateChanged,
 } from "firebase/auth";
 
 const auth = getAuth(app);
@@ -17,39 +16,42 @@ export default AuthContext;
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Subscribe to the authentication state changes
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
-        console.log(user);
-      } else {
-        setUser(null);
-      }
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setIsLoading(false);
+      setUser(user);
     });
 
-    // Unsubscribe from the authentication state changes when the component is unmounted
     return () => {
       unsubscribe();
     };
   }, []);
 
   const handleLogin = async () => {
-    // Sign in with the Google popup provider
-    const { user } = await signInWithPopup(auth, provider);
-    setUser(user);
+    try {
+      const { user } = await signInWithPopup(auth, provider);
+      setUser(user);
+    } catch (error) {
+      console.error("Erreur de connexion avec Google:", error);
+    }
   };
 
   const handleLogout = async () => {
-    await signOut(auth);
-    setUser(null);
+    try {
+      await signOut(auth);
+      setUser(null);
+    } catch (error) {
+      console.error("Erreur de déconnexion:", error);
+    }
   };
 
   const authContextValue = {
     user,
     handleLogin,
     handleLogout,
+    isLoading, // Ajoutez isLoading au contexte
   };
 
   return (
