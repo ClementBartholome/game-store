@@ -10,7 +10,9 @@ export default function GamesColumn({
     <section className="games-column">
       <h2>{columnTitle}</h2>
       <div className="games-column-container">
-        <Link to={`/game/${gamesTitles[0].replace(/ /g, "-")}`}>
+        <Link
+          to={`/game/${gamesTitles[0].replace(/'/g, "").replace(/ /g, "-")}`}
+        >
           <div className="games-column-item">
             <div className="games-column-item-img">
               <img src={gamesImages[0]} alt={gamesTitles[0]} />
@@ -21,7 +23,9 @@ export default function GamesColumn({
             </div>
           </div>
         </Link>
-        <Link to={`/game/${gamesTitles[1].replace(/ /g, "-")}`}>
+        <Link
+          to={`/game/${gamesTitles[0].replace(/'/g, "").replace(/ /g, "-")}`}
+        >
           <div className="games-column-item">
             <div className="games-column-item-img">
               <img src={gamesImages[1]} alt={gamesTitles[1]} />
