@@ -11,7 +11,9 @@ function GamePage() {
   const { games } = useContext(GamesContext);
 
   const { name } = useParams();
-  const game = games.find((game) => game.title === name.replace(/-/g, " "));
+  const game = games.find(
+    (game) => game.title === name.replace(/-/g, " ").replace(/'/g, "")
+  );
 
   if (!game) {
     return <div>Le jeu demandé n'existe pas.</div>;
