@@ -24,9 +24,9 @@ export default function HomePage() {
             ) : (
               <>
                 <button className="login" onClick={handleLogin}>
-                  Connexion
+                  Connexion avec Google
                 </button>
-                <button className="register">Inscription</button>
+                {/* <button className="register">Inscription</button> */}
               </>
             )}
           </div>
