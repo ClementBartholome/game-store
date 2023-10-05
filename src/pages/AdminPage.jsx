@@ -111,109 +111,110 @@ export default function AdminPage() {
   };
 
   return (
-    <div>
-      <h1>Page d'administration - Ajouter un nouveau jeu</h1>
+    <main className="admin-page">
+      <h1>Page d'administration</h1>
+      <h2>Ajouter un nouveau jeu</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Titre</label>
           <input
             type="text"
             name="title"
             value={newGame.title}
             onChange={handleInputChange}
+            placeholder="Titre du jeu"
           />
         </div>
         <div>
-          <label>Description</label>
           <textarea
             name="description"
             value={newGame.description}
             onChange={handleInputChange}
+            placeholder="Description courte"
           />
         </div>
         <div>
-          <label>Description complète</label>
           <textarea
             name="fulldescription"
             value={newGame.fulldescription}
             onChange={handleInputChange}
+            placeholder="Description complète"
           />
         </div>
         <div>
-          <label>Prix</label>
           <input
             type="number"
             name="price"
             value={newGame.price}
             onChange={handleInputChange}
+            placeholder="Prix en euros"
           />
         </div>
         <div>
-          <label>Tags (séparés par des virgules)</label>
           <input
             type="text"
             name="tags"
             value={newGame.tags}
             onChange={handleInputChange}
+            placeholder="Tags (séparés par des virgules)"
           />
         </div>
         <div>
-          <label>Lien</label>
           <input
             type="text"
             name="specs.link"
             value={newGame.specs.link}
             onChange={handleInputChange}
+            placeholder="Lien vers le site officiel"
           />
         </div>
         <div>
-          <label>Date de sortie</label>
           <input
             type="text"
             name="specs.release"
             value={newGame.specs.release}
             onChange={handleInputChange}
+            placeholder="Date de sortie"
           />
         </div>
         <div>
-          <label>Développeur</label>
           <input
             type="text"
             name="specs.developer"
             value={newGame.specs.developer}
             onChange={handleInputChange}
+            placeholder="Développeur"
           />
         </div>
         <div>
-          <label>Éditeur</label>
           <input
             type="text"
             name="specs.publisher"
             value={newGame.specs.publisher}
             onChange={handleInputChange}
+            placeholder="Éditeur"
           />
         </div>
 
         <div>
-          <label>Couverture</label>
           <input
             type="text"
             name="cover"
             value={newGame.cover}
             onChange={handleInputChange}
+            placeholder="URL de l'image de couverture"
           />
         </div>
         <div>
-          <label>Images</label>
           <input
             type="text"
             name="images"
             value={newGame.images}
             onChange={handleInputChange}
+            placeholder="URL des images (séparées par des virgules)"
           />
         </div>
         <button type="submit">Ajouter le jeu</button>
       </form>
-    </div>
+    </main>
   );
 }
