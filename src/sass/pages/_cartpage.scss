@@ -12,6 +12,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    min-width: 75%;
+    justify-content: center;
 
     .cart-item {
       display: flex;
